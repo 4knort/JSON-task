@@ -1,6 +1,6 @@
 'use strict';
 
-(function(){
+(function() {
 
   getData();
 
@@ -8,7 +8,7 @@
   function getData() {
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/json/posts.json');
+    xhr.open('GET', 'http://4knort.xyz/projects/json/json/posts.json');
     xhr.onload = function(event) {
       var responseData = event.target.response;
       var dataFromJson = JSON.parse(responseData);
@@ -21,7 +21,7 @@
     dataFromJson.forEach(function(data) {
       var postElement = new Post(data);
       postElement.render();
-    })
+    });
   }
 
   // form container

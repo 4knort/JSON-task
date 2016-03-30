@@ -2,7 +2,6 @@
 
 (function() {
   function Form() {
-    
   }
 
   Form.prototype.addPost = function() {
@@ -24,7 +23,7 @@
 
     var postElement = new Post(postObj);
     postElement.render();
-  }
+  };
 
   window.Form = Form;
 
